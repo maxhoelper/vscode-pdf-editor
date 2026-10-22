@@ -14,7 +14,9 @@ current [PDF.js](https://mozilla.github.io/pdf.js/) viewer and its editing tools
 
 ## Install
 
-Build the `.vsix` (see below) and run *Extensions: Install from VSIX…* in VS Code.
+Download `pdf-editor-x.y.z.vsix` from the
+[latest release](https://github.com/maxhoelper/vscode-pdf-editor/releases/latest)
+and run *Extensions: Install from VSIX…* in VS Code (or build it yourself, see below).
 
 ## Develop
 
