@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.0.3
+
+- Toolbar save button and Cmd/Ctrl+S save in place instead of opening a download dialog
+- Fix documents never finishing loading: start the PDF.js worker from a self-fetched blob
+- Fix PDF bytes arriving in the wrong shape in the webview
+- Log loading and errors to the "PDF Editor" output channel
+
+## 2.0.0
+
+- Fork as "PDF Editor": highlight, text, freehand drawing and images
+- Save annotations into the PDF (Cmd/Ctrl+S), hot-exit backups, revert
+- Paste images anywhere with Cmd/Ctrl+V
+- Update PDF.js to 6.4.299; use its stock viewer.html unmodified
+
 ## 1.2.2 (2022/12/23)
 
 - Fix about rendering Unicode characters

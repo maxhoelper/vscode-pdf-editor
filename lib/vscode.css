@@ -1,0 +1,9 @@
+/* Hide viewer features that don't apply inside VS Code. */
+#printButton,
+#secondaryPrint,
+#secondaryOpenFile,
+#presentationMode,
+#viewBookmark,
+#viewBookmarkSeparator {
+  display: none !important;
+}
