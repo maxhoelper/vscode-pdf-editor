@@ -10,9 +10,16 @@ export class PdfDocument extends Disposable implements vscode.CustomDocument {
     uri: vscode.Uri,
     backupId: string | undefined
   ): Promise<PdfDocument> {
-    const dataFile = backupId ? vscode.Uri.parse(backupId) : uri;
-    const data = await vscode.workspace.fs.readFile(dataFile);
-    return new PdfDocument(uri, data, !!backupId);
+    if (backupId) {
+      try {
+        const backup = await vscode.workspace.fs.readFile(vscode.Uri.parse(backupId));
+        return new PdfDocument(uri, backup, true);
+      } catch {
+        // The backup can be gone, e.g. after the extension ID changed; fall
+        // back to the file on disk rather than failing to open.
+      }
+    }
+    return new PdfDocument(uri, await vscode.workspace.fs.readFile(uri), false);
   }
 
   private readonly _onDidDispose = this._register(

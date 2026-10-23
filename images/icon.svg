@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="56" fill="#1F2A44"/>
+  <!-- page with folded corner -->
+  <path d="M70 40 H160 L196 76 V212 a8 8 0 0 1 -8 8 H70 a8 8 0 0 1 -8 -8 V48 a8 8 0 0 1 8 -8 Z" fill="#F7F7F2"/>
+  <path d="M160 40 V68 a8 8 0 0 0 8 8 H196 Z" fill="#C9CCD6"/>
+  <!-- text lines -->
+  <rect x="84" y="96" width="92" height="9" rx="4.5" fill="#B9BECB"/>
+  <rect x="84" y="122" width="76" height="9" rx="4.5" fill="#B9BECB"/>
+  <rect x="84" y="148" width="92" height="9" rx="4.5" fill="#B9BECB"/>
+  <rect x="84" y="174" width="56" height="9" rx="4.5" fill="#B9BECB"/>
+  <!-- highlighter stroke over line 2 -->
+  <rect x="78" y="114" width="90" height="25" rx="6" fill="#FFD43B" opacity="0.85"/>
+  <!-- pen -->
+  <g transform="rotate(45 186 170)">
+    <rect x="174" y="92" width="24" height="96" rx="5" fill="#FF6B4A"/>
+    <rect x="174" y="92" width="24" height="16" rx="5" fill="#E2553A"/>
+    <path d="M174 188 H198 L186 212 Z" fill="#F5D9B8"/>
+    <path d="M182 204 H190 L186 212 Z" fill="#1F2A44"/>
+  </g>
+  <!-- ink squiggle -->
+  <path d="M84 200 q10 -14 20 0 t20 0 t20 0" fill="none" stroke="#2F6FED" stroke-width="5" stroke-linecap="round"/>
+</svg>

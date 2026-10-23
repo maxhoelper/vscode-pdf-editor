@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { PdfEditorProvider } from './pdfProvider';
 
 export function activate(context: vscode.ExtensionContext): void {
-  const log = vscode.window.createOutputChannel('PDF Editor', { log: true });
+  const log = vscode.window.createOutputChannel('PDF Markup', { log: true });
   context.subscriptions.push(
     log,
     vscode.window.registerCustomEditorProvider(

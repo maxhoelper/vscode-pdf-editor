@@ -1,4 +1,6 @@
-# PDF Editor for VS Code
+# PDF Markup
+
+![PDF Markup in VS Code](images/screenshot.png)
 
 View **and annotate** PDF files right in VS Code — a fork of
 [vscode-pdf](https://github.com/tomoki1207/vscode-pdfviewer) on top of the
@@ -14,7 +16,7 @@ current [PDF.js](https://mozilla.github.io/pdf.js/) viewer and its editing tools
 
 ## Install
 
-Download `pdf-editor-x.y.z.vsix` from the
+Install **PDF Markup** from the VS Code Marketplace, or download `pdf-markup-x.y.z.vsix` from the
 [latest release](https://github.com/maxhoelper/vscode-pdf-editor/releases/latest)
 and run *Extensions: Install from VSIX…* in VS Code (or build it yourself, see below).
 
@@ -23,7 +25,7 @@ and run *Extensions: Install from VSIX…* in VS Code (or build it yourself, see
 ```sh
 npm install
 npm run compile      # or: npm run watch, then F5 "Launch Extension"
-npm run package      # builds pdf-editor-x.y.z.vsix
+npm run package      # builds pdf-markup-x.y.z.vsix
 ```
 
 ## How it works
@@ -31,8 +33,9 @@ npm run package      # builds pdf-editor-x.y.z.vsix
 - `src/pdfProvider.ts` – custom editor: loads the file, tracks dirty state,
   saves/backs up/reverts by asking the webview for the current bytes.
 - `lib/main.mjs` – glue loaded into PDF.js' stock `viewer.html`: sets viewer
-  options, sends "edited" to VS Code, answers save requests via
-  `pdfDocument.saveDocument()`.
+  options, starts the PDF.js worker, sends "edited" to VS Code, answers save
+  requests via `pdfDocument.saveDocument()`. Diagnostics go to the
+  "PDF Markup" output channel.
 - `lib/pdfjs/` – unmodified PDF.js release (`pdfjs-x.y.z-dist.zip` minus the
   sample PDF, debugger and source maps).
 

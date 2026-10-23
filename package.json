@@ -1,24 +1,32 @@
 {
-  "name": "pdf-editor",
-  "displayName": "PDF Editor",
-  "description": "View and annotate PDF files in VS Code: highlight, draw, add text and images. Fork of vscode-pdf.",
-  "version": "2.0.4",
-  "publisher": "local",
+  "name": "pdf-markup",
+  "displayName": "PDF Markup",
+  "description": "Annotate PDFs right in VS Code: highlight, draw, add text and images, and save them into the file.",
+  "version": "2.1.0",
+  "publisher": "maxhoelper",
   "license": "MIT",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
+    "Visualization",
     "Other"
   ],
   "keywords": [
     "pdf",
     "viewer",
     "annotate",
+    "annotation",
     "highlight",
-    "editor"
+    "markup",
+    "draw",
+    "notes"
   ],
-  "icon": "vscode-pdf.png",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1F2A44",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/maxhoelper/vscode-pdf-editor.git"
@@ -32,8 +40,8 @@
     },
     "customEditors": [
       {
-        "viewType": "pdfEditor.editor",
-        "displayName": "PDF Editor",
+        "viewType": "pdfMarkup.editor",
+        "displayName": "PDF Markup",
         "selector": [
           {
             "filenamePattern": "*.pdf"
@@ -44,9 +52,9 @@
     ],
     "configuration": {
       "type": "object",
-      "title": "PDF Editor",
+      "title": "PDF Markup",
       "properties": {
-        "pdf-editor.default.cursor": {
+        "pdf-markup.default.cursor": {
           "markdownDescription": "The default cursor tool.",
           "type": "string",
           "default": "select",
@@ -55,18 +63,18 @@
             "hand"
           ]
         },
-        "pdf-editor.default.scale": {
+        "pdf-markup.default.scale": {
           "markdownDescription": "The default zoom level. Allowed values are `auto`, `page-actual`, `page-fit`, `page-width`, and 1-based scale values. (`1.0` means 100%)",
           "type": "string",
           "default": "auto",
           "pattern": "^(\\d+(?:\\.\\d+)?|auto|page-actual|page-fit|page-width)$"
         },
-        "pdf-editor.default.sidebar": {
+        "pdf-markup.default.sidebar": {
           "markdownDescription": "Show the sidebar on load.",
           "type": "boolean",
           "default": false
         },
-        "pdf-editor.default.scrollMode": {
+        "pdf-markup.default.scrollMode": {
           "markdownDescription": "The default scroll mode.",
           "type": "string",
           "default": "vertical",
@@ -76,7 +84,7 @@
             "wrapped"
           ]
         },
-        "pdf-editor.default.spreadMode": {
+        "pdf-markup.default.spreadMode": {
           "markdownDescription": "The default spread mode.",
           "type": "string",
           "default": "none",

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0
+
+- Renamed to **PDF Markup** (`maxhoelper.pdf-markup`) for the VS Code Marketplace, with a new icon
+- Open the file from disk if a hot-exit backup can't be read instead of failing to open
+
 ## 2.0.4
 
 - Fix the viewer (and its toolbar) scrolling sideways: reset VS Code's default webview body padding

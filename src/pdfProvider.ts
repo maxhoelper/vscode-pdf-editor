@@ -12,7 +12,7 @@ type WebviewMessage =
 export class PdfEditorProvider
   implements vscode.CustomEditorProvider<PdfDocument>
 {
-  public static readonly viewType = 'pdfEditor.editor';
+  public static readonly viewType = 'pdfMarkup.editor';
 
   private readonly _onDidChangeCustomDocument = new vscode.EventEmitter<
     vscode.CustomDocumentContentChangeEvent<PdfDocument>
@@ -186,7 +186,7 @@ export class PdfEditorProvider
     const res = (...p: string[]) =>
       webview.asWebviewUri(vscode.Uri.joinPath(lib, ...p)).toString();
 
-    const config = vscode.workspace.getConfiguration('pdf-editor');
+    const config = vscode.workspace.getConfiguration('pdf-markup');
     const settings = {
       pdfjsRoot: res('pdfjs', '/'),
       defaults: {
