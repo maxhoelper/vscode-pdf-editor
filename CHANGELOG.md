@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.4
+
+- Fix the viewer (and its toolbar) scrolling sideways: reset VS Code's default webview body padding
+
 ## 2.0.3
 
 - Toolbar save button and Cmd/Ctrl+S save in place instead of opening a download dialog

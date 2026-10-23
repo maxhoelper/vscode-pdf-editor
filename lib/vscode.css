@@ -7,3 +7,12 @@
 #viewBookmarkSeparator {
   display: none !important;
 }
+
+/* VS Code's default webview styles pad the body by 20px on each side, which
+   makes the viewer wider than the panel and lets the toolbar scroll sideways. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
